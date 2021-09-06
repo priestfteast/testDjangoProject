@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+     {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'msgs/style.css' %}">
+</head>
+<body>
+
+<p>{{ message.message_text }}</p>
+
+<button type="submit"  onclick="location.href='{% url 'msgs:index' %}'" name='mybtn2'>Back</button>
+
+</form>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+{% if latest_messages_list %}
+    <ul>
+    {% for message in latest_messages_list %}
+        <li><a href="{% url 'msgs:detail' message.id %}">{{ message.message_text }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No messages are available.</p>
+{% endif %}
+
+ <button type="submit"  onclick="location.href='{% url 'msgs:new' 1 %}'" name='mybtn2'>new message</button>
+</body>
+</html>
